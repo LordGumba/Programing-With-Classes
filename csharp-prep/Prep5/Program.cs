@@ -7,13 +7,21 @@ class Program
     static void Main(string[] args)
     {
         DisplayMessage();
+        
+        Console.WriteLine("Whats your username?");
+        string name = Console.ReadLine();
 
-        string userName = DisplayPersonaluserName();
-        int userNumber = PersonalUserNumber();
+        Console.WriteLine("Whats your usernumber?");
+        int number = int.Parse(Console.ReadLine());
 
-        int squaredNumber = SquareNumbers(userNumber);
+        DisplayPersonalUserName(name);
+        PersonalUserNumber(number);
 
-        DisplayResult(userName, squaredNumber);
+       
+
+        int squaredNumber = SquareNumbers(number);
+
+        DisplayResult(name, squaredNumber);
     }
     static int SquareNumbers(int first)
 {
@@ -24,12 +32,12 @@ class Program
 {
     Console.WriteLine("Hello world!");
 }
-   static void DisplayPersonaluserName(string userName)
+   static void DisplayPersonalUserName(string userName)
 {
     Console.WriteLine($"Hello {userName}");
 }
 
-   static void PersonalUserNumber(string userNumber)
+   static void PersonalUserNumber(int userNumber)
 {
     Console.WriteLine($"Oh! your favorite number is {userNumber}!");
 }
