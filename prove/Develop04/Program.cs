@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Animal animal = new Dog ();
+        animal.Move();
+
+        Bird bird = new Bird();
+        bird.Speak();
     }
 }
